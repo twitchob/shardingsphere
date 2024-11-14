@@ -163,6 +163,8 @@
                                 <goals>
                                     <goal>exec</goal>
                                 </goals>
+
+
                                 <phase>package</phase>
                                 <configuration>
                                     <executable>docker</executable>
