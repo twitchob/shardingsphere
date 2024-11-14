@@ -32,5 +32,6 @@
         <module>postgresql</module>
         <module>mysql</module>
         <module>opengauss</module>
+        <module>kingbase</module>
     </modules>
 </project>
