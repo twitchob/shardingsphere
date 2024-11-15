@@ -25,7 +25,7 @@ import java.util.Collections;
 /**
  * Database type of PostgreSQL.
  */
-public final class PostgreSQLDatabaseType implements DatabaseType {
+public final class KingbaseDatabaseType implements DatabaseType {
     
     @Override
     public Collection<String> getJdbcUrlPrefixes() {

@@ -50,6 +50,7 @@ public final class DatabaseTypeFactory {
     }
     
     private static boolean matchURLs(final String url, final DatabaseType databaseType) {
+        System.out.println();
         return databaseType.getJdbcUrlPrefixes().stream().anyMatch(url::startsWith);
     }
 }
