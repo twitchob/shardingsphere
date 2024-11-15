@@ -19,21 +19,21 @@ package org.apache.shardingsphere.infra.database.kingbase.type;
 
 import org.apache.shardingsphere.infra.database.core.type.DatabaseType;
 
-import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 
 /**
- * Database type of ClickHouse.
+ * Database type of PostgreSQL.
  */
-public final class ClickHouseDatabaseType implements DatabaseType {
+public final class PostgreSQLDatabaseType implements DatabaseType {
     
     @Override
     public Collection<String> getJdbcUrlPrefixes() {
-        return Arrays.asList("jdbc:ch:", "jdbc:clickhouse:");
+        return Collections.singletonList(String.format("jdbc:%s:", getType().toLowerCase()+"8"));
     }
     
     @Override
     public String getType() {
-        return "ClickHouse";
+        return "Kingbase";
     }
 }
