@@ -37,6 +37,7 @@
         <module>doris</module>
         <module>hive</module>
         <module>presto</module>
+        <module>kingbase</module>
     </modules>
     
     <dependencies>
