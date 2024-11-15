@@ -23,11 +23,11 @@ import org.apache.shardingsphere.sql.parser.api.visitor.statement.type.DDLStatem
 import org.apache.shardingsphere.sql.parser.api.visitor.statement.type.DMLStatementVisitor;
 import org.apache.shardingsphere.sql.parser.api.visitor.statement.type.RLStatementVisitor;
 import org.apache.shardingsphere.sql.parser.api.visitor.statement.type.TCLStatementVisitor;
-import org.apache.shardingsphere.sql.parser.postgresql.visitor.statement.type.PostgreSQLDALStatementVisitor;
-import org.apache.shardingsphere.sql.parser.postgresql.visitor.statement.type.PostgreSQLDCLStatementVisitor;
-import org.apache.shardingsphere.sql.parser.postgresql.visitor.statement.type.PostgreSQLDDLStatementVisitor;
-import org.apache.shardingsphere.sql.parser.postgresql.visitor.statement.type.PostgreSQLDMLStatementVisitor;
-import org.apache.shardingsphere.sql.parser.postgresql.visitor.statement.type.PostgreSQLTCLStatementVisitor;
+import org.apache.shardingsphere.sql.parser.kingbase.visitor.statement.type.PostgreSQLDALStatementVisitor;
+import org.apache.shardingsphere.sql.parser.kingbase.visitor.statement.type.PostgreSQLDCLStatementVisitor;
+import org.apache.shardingsphere.sql.parser.kingbase.visitor.statement.type.PostgreSQLDDLStatementVisitor;
+import org.apache.shardingsphere.sql.parser.kingbase.visitor.statement.type.PostgreSQLDMLStatementVisitor;
+import org.apache.shardingsphere.sql.parser.kingbase.visitor.statement.type.PostgreSQLTCLStatementVisitor;
 import org.apache.shardingsphere.sql.parser.spi.SQLStatementVisitorFacade;
 
 /**

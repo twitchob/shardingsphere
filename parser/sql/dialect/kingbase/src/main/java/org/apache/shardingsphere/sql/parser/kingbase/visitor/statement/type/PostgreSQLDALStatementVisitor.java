@@ -32,7 +32,7 @@ import org.apache.shardingsphere.sql.parser.autogen.PostgreSQLStatementParser.Sh
 import org.apache.shardingsphere.sql.parser.autogen.PostgreSQLStatementParser.VacuumContext;
 import org.apache.shardingsphere.sql.parser.autogen.PostgreSQLStatementParser.VacuumRelationContext;
 import org.apache.shardingsphere.sql.parser.autogen.PostgreSQLStatementParser.VacuumRelationListContext;
-import org.apache.shardingsphere.sql.parser.postgresql.visitor.statement.PostgreSQLStatementVisitor;
+import org.apache.shardingsphere.sql.parser.kingbase.visitor.statement.PostgreSQLStatementVisitor;
 import org.apache.shardingsphere.sql.parser.statement.core.segment.dal.VariableAssignSegment;
 import org.apache.shardingsphere.sql.parser.statement.core.segment.dal.VariableSegment;
 import org.apache.shardingsphere.sql.parser.statement.core.segment.generic.table.SimpleTableSegment;
