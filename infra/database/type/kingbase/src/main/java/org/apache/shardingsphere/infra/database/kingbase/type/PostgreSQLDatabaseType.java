@@ -29,7 +29,7 @@ public final class PostgreSQLDatabaseType implements DatabaseType {
     
     @Override
     public Collection<String> getJdbcUrlPrefixes() {
-        return Collections.singletonList(String.format("jdbc:%s:", getType().toLowerCase()+"8"));
+        return Collections.singletonList(String.format("jdbc:%s:", "kingbase8"));
     }
     
     @Override
