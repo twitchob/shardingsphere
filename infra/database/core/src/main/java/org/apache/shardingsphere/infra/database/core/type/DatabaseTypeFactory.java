@@ -40,6 +40,7 @@ public final class DatabaseTypeFactory {
      */
     public static DatabaseType get(final String url) {
         Collection<DatabaseType> databaseTypes = ShardingSphereServiceLoader.getServiceInstances(DatabaseType.class).stream().filter(each -> matchURLs(url, each)).collect(Collectors.toList());
+        System.out.println("数据库类型有"+ databaseTypes.size());
         ShardingSpherePreconditions.checkNotEmpty(databaseTypes, () -> new UnsupportedStorageTypeException(url));
         for (DatabaseType each : databaseTypes) {
             if (!each.getTrunkDatabaseType().isPresent()) {
@@ -50,7 +51,7 @@ public final class DatabaseTypeFactory {
     }
     
     private static boolean matchURLs(final String url, final DatabaseType databaseType) {
-        System.out.println();
+        System.out.println("数据库URL："+url);
         return databaseType.getJdbcUrlPrefixes().stream().anyMatch(url::startsWith);
     }
 }
