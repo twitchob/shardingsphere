@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class DatabaseTypeFactory {
-    
+
     /**
      * Get database type.
      *
@@ -39,9 +39,9 @@ public final class DatabaseTypeFactory {
      * @return database type
      */
     public static DatabaseType get(final String url) {
+        Collection<DatabaseType> serviceInstances = ShardingSphereServiceLoader.getServiceInstances(DatabaseType.class);
         Collection<DatabaseType> databaseTypes = ShardingSphereServiceLoader.getServiceInstances(DatabaseType.class).stream().filter(each -> matchURLs(url, each)).collect(Collectors.toList());
-        System.out.println("数据库类型有"+ databaseTypes.size());
-        ShardingSpherePreconditions.checkNotEmpty(databaseTypes, () -> new UnsupportedStorageTypeException(url));
+        ShardingSpherePreconditions.checkNotEmpty(databaseTypes, () -> new UnsupportedStorageTypeException(url+"/n"+serviceInstances.toString()));
         for (DatabaseType each : databaseTypes) {
             if (!each.getTrunkDatabaseType().isPresent()) {
                 return each;
@@ -49,9 +49,8 @@ public final class DatabaseTypeFactory {
         }
         return databaseTypes.iterator().next();
     }
-    
+
     private static boolean matchURLs(final String url, final DatabaseType databaseType) {
-        System.out.println("数据库URL："+url);
         return databaseType.getJdbcUrlPrefixes().stream().anyMatch(url::startsWith);
     }
 }

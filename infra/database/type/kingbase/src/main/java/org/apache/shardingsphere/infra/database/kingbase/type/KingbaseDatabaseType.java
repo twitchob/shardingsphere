@@ -29,7 +29,7 @@ public final class KingbaseDatabaseType implements DatabaseType {
     
     @Override
     public Collection<String> getJdbcUrlPrefixes() {
-        return Collections.singletonList(String.format("jdbc:%s:", "kingbase8://"));
+        return Collections.singletonList(String.format("jdbc:%s:", getType().toLowerCase()));
     }
     
     @Override
