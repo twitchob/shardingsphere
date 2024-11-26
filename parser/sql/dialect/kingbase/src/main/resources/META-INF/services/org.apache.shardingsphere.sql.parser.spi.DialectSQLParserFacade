@@ -15,4 +15,4 @@
 # limitations under the License.
 #
 
-org.apache.shardingsphere.sql.parser.kingbase.parser.PostgreSQLParserFacade
+org.apache.shardingsphere.sql.parser.kingbase.parser.KingbaseSQLParserFacade

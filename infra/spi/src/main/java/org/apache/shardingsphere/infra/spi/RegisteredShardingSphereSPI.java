@@ -49,7 +49,7 @@ class RegisteredShardingSphereSPI<T> {
     
     private Collection<T> load() {
         Collection<T> result = new LinkedList<>();
-        for (T each : ServiceLoader.load(serviceInterface)) {
+        for (T each : ServiceLoader.load(serviceInterface, serviceInterface.getClass().getClassLoader())) {
             result.add(each);
         }
         return result;

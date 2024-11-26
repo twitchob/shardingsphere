@@ -33,11 +33,14 @@ public final class KingbaseSystemDatabase implements DialectSystemDatabase {
     private static final Map<String, Collection<String>> SYSTEM_DATABASE_SCHEMA_MAP = new HashMap<>();
 
     private static final Collection<String> SYSTEM_SCHEMAS = new HashSet<>(Arrays.asList(
-            "pg_toast", "pg_bitmapindex", "pg_temp_1",
-            "pg_toast_temp_1", "pg_catalog", "public",
-            "information_schema", "sysaudit", "src_restrict",
-            "sysmac", "SYS_HM", "sys_catalog",
-            "sys", "dbms_sql"
+//            "pg_toast", "pg_bitmapindex", "pg_temp_1",
+//            "pg_toast_temp_1", "pg_catalog", "public",
+//            "information_schema", "sysaudit", "src_restrict",
+//            "sysmac", "SYS_HM", "sys_catalog",
+//            "sys", "dbms_sql"
+//            "anon", "dbms_sql", "perf", "pg_bitmapindex", "pg_temp_1", "pg_toast", "pg_toast_temp_1",
+//            "public", "src_restrict", "sys", "sys_catalog", "SYS_HM", "sysaudit", "sysmac",
+//            "xlog_record_read"
     ));
 
     static {

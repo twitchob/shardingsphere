@@ -15,29 +15,13 @@
  * limitations under the License.
  */
 
-package org.apache.shardingsphere.sql.parser.kingbase.parser;
+package org.apache.shardingsphere.sql.parser.statement.kingbase.tcl;
 
-import org.apache.shardingsphere.sql.parser.api.parser.SQLLexer;
-import org.apache.shardingsphere.sql.parser.api.parser.SQLParser;
-import org.apache.shardingsphere.sql.parser.spi.DialectSQLParserFacade;
+import org.apache.shardingsphere.sql.parser.statement.core.statement.tcl.CommitStatement;
+import org.apache.shardingsphere.sql.parser.statement.kingbase.PostgreSQLStatement;
 
 /**
- * SQL parser facade for PostgreSQL.
+ * PostgreSQL commit statement.
  */
-public final class PostgreSQLParserFacade implements DialectSQLParserFacade {
-    
-    @Override
-    public Class<? extends SQLLexer> getLexerClass() {
-        return PostgreSQLLexer.class;
-    }
-    
-    @Override
-    public Class<? extends SQLParser> getParserClass() {
-        return PostgreSQLParser.class;
-    }
-    
-    @Override
-    public String getDatabaseType() {
-        return "Kingbase";
-    }
+public final class PostgreSQLCommitStatement extends CommitStatement implements PostgreSQLStatement {
 }

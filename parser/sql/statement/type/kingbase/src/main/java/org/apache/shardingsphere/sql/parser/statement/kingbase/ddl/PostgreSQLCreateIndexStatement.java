@@ -15,25 +15,30 @@
  * limitations under the License.
  */
 
-package org.apache.shardingsphere.infra.database.kingbase.type;
+package org.apache.shardingsphere.sql.parser.statement.kingbase.ddl;
 
-import org.apache.shardingsphere.infra.database.core.type.DatabaseType;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import org.apache.shardingsphere.sql.parser.statement.core.statement.ddl.CreateIndexStatement;
+import org.apache.shardingsphere.sql.parser.statement.kingbase.PostgreSQLStatement;
 
-import java.util.Collection;
-import java.util.Collections;
+import java.util.Optional;
 
 /**
- * Database type of PostgreSQL.
+ * PostgreSQL create index statement.
  */
-public final class PostgreSQLDatabaseType implements DatabaseType {
+@RequiredArgsConstructor
+@Getter
+@Setter
+public final class PostgreSQLCreateIndexStatement extends CreateIndexStatement implements PostgreSQLStatement {
+    
+    private final boolean ifNotExists;
+    
+    private Integer generatedIndexStartIndex;
     
     @Override
-    public Collection<String> getJdbcUrlPrefixes() {
-        return Collections.singletonList(String.format("jdbc:%s:", "kingbase8"));
-    }
-    
-    @Override
-    public String getType() {
-        return "Kingbase";
+    public Optional<Integer> getGeneratedIndexStartIndex() {
+        return Optional.ofNullable(generatedIndexStartIndex);
     }
 }

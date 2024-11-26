@@ -38,5 +38,6 @@
         <module>presto</module>
         <module>sql92</module>
         <module>sqlserver</module>
+        <module>kingbase</module>
     </modules>
 </project>

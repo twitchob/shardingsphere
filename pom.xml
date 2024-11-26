@@ -119,6 +119,7 @@
         <lombok.version>1.18.34</lombok.version>
         
         <postgresql.version>42.7.2</postgresql.version>
+        <kingbase.version>8.6.0.jre7</kingbase.version>
         <mysql-connector-java.version>8.3.0</mysql-connector-java.version>
         <mssql.version>6.1.7.jre8-preview</mssql.version>
         <h2.version>2.2.224</h2.version>
@@ -439,6 +440,12 @@
                 <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>
                 <version>${postgresql.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>cn.com.kingbase</groupId>
+                <artifactId>kingbase8</artifactId>
+                <version>${kingbase.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>

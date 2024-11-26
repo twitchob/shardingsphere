@@ -124,7 +124,7 @@ public final class SimpleTableSegmentBinder {
         if (binderContext.getExternalTableBinderContexts().containsKey(tableName)) {
             return;
         }
-        ShardingSpherePreconditions.checkState(binderContext.getMetaData().containsDatabase(databaseName)
+         ShardingSpherePreconditions.checkState(binderContext.getMetaData().containsDatabase(databaseName)
                 && binderContext.getMetaData().getDatabase(databaseName).containsSchema(schemaName)
                 && binderContext.getMetaData().getDatabase(databaseName).getSchema(schemaName).containsTable(tableName),
                 () -> new TableNotFoundException(tableName));
