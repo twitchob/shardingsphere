@@ -124,23 +124,23 @@ dataSources:
     maxLifetimeMilliseconds: 1800000
     maxPoolSize: 50
     minPoolSize: 1
-rules:
-  - !SINGLE
-    tables:
-      - "*.*.*"
-  - !ENCRYPT
-    encryptors:
-      aes_encryptor:
-        type: AES
-        props:
-          aes-key-value: 123456abc
-          digest-algorithm-name: SHA-1
-    tables:
-      student:
-        columns:
-          name:
-            cipher:
-              name: name
-              encryptorName: aes_encryptor
+#rules:
+#  - !SINGLE
+#    tables:
+#      - "*.*.*"
+#  - !ENCRYPT
+#    encryptors:
+#      aes_encryptor:
+#        type: AES
+#        props:
+#          aes-key-value: 123456abc
+#          digest-algorithm-name: SHA-1
+#    tables:
+#      student:
+#        columns:
+#          name:
+#            cipher:
+#              name: name
+#              encryptorName: aes_encryptor
 
 
