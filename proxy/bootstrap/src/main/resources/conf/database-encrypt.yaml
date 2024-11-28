@@ -112,18 +112,18 @@
 #            name: order_encrypt
 #            encryptorName: aes_encryptor
 
-databaseName: kingbase
-
-dataSources:
-  ds_0:
-    url: jdbc:kingbase8://192.168.7.113:4321/kingbase
-    username: kingbase
-    password: 123456
-    connectionTimeoutMilliseconds: 30000
-    idleTimeoutMilliseconds: 60000
-    maxLifetimeMilliseconds: 1800000
-    maxPoolSize: 50
-    minPoolSize: 1
+#databaseName: kingbase
+#
+#dataSources:
+#  ds_0:
+#    url: jdbc:kingbase8://192.168.7.113:4321/kingbase
+#    username: kingbase
+#    password: 123456
+#    connectionTimeoutMilliseconds: 30000
+#    idleTimeoutMilliseconds: 60000
+#    maxLifetimeMilliseconds: 1800000
+#    maxPoolSize: 50
+#    minPoolSize: 1
 #rules:
 #  - !SINGLE
 #    tables:
