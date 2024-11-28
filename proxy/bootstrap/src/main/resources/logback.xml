@@ -16,24 +16,24 @@
   ~ limitations under the License.
   -->
 
-<configuration>
-    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n</pattern>
-        </encoder>
-    </appender>
-    <logger name="org.apache.shardingsphere" level="debug" additivity="false">
-        <appender-ref ref="console" />
-    </logger>
+<!--<configuration>-->
+<!--    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder>-->
+<!--            <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+<!--    <logger name="org.apache.shardingsphere" level="debug" additivity="false">-->
+<!--        <appender-ref ref="console" />-->
+<!--    </logger>-->
 
-<!--    <logger name="com.zaxxer.hikari" level="debug" />-->
+<!--&lt;!&ndash;    <logger name="com.zaxxer.hikari" level="debug" />&ndash;&gt;-->
 
-<!--    <logger name="com.atomikos" level="debug" />-->
+<!--&lt;!&ndash;    <logger name="com.atomikos" level="debug" />&ndash;&gt;-->
 
-<!--    <logger name="io.netty" level="debug" />-->
+<!--&lt;!&ndash;    <logger name="io.netty" level="debug" />&ndash;&gt;-->
 
-    <root>
-        <level value="info" />
-        <appender-ref ref="console" />
-    </root>
-</configuration>
+<!--    <root>-->
+<!--        <level value="info" />-->
+<!--        <appender-ref ref="console" />-->
+<!--    </root>-->
+<!--</configuration>-->
